@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  background-color: #030712;
+}
+
+#loading {
+	width: 100vw;
+	height: 100vh;
+	background-color: #030712;
+
+	position: fixed;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 99999;
+}
+
+.start-loading {
+  visibility: visible;
+  animation: none;
+}
+
+.stop-loading {
+	animation: loader 1s both;
+}
+
+@keyframes loader {
+	0% {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	50%{
+		opacity: 1;
+	}
+
+	100% {
+		visibility: hidden;
+		opacity: 0;
+	}
+}
